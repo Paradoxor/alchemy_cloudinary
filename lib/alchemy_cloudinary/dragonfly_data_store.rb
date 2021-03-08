@@ -28,7 +28,7 @@ module AlchemyCloudinary
     private
 
     def public_id(uid)
-      File.basename(uid, ext(uid, true))
+      uid.chomp(ext(uid, true))
     end
 
     def name(uid)
